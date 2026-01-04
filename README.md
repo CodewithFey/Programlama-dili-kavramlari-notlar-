@@ -9,7 +9,6 @@ Bu repository, **Programlama Dilleri Kavramları (PDK)** dersi için hazırlanm�
 
 içeren **bir çalışma platformudur**.
 
-
 ## Canlı Site (GitHub Pages)
 
 **https://codewithfey.github.io/Programlama-dili-kavramlari-notlar-/**
@@ -18,7 +17,6 @@ Tüm içeriklere tarayıcı üzerinden erişilebilir.
 
 Çıkmış Sorular için : https://pdkcikmislar.netlify.app/
 
-
 ## İçerik Yapısı
 
 - `/units` → Ders üniteleri (kitap akışına uygun)
@@ -26,16 +24,6 @@ Tüm içeriklere tarayıcı üzerinden erişilebilir.
 - `/exams` → Çıkmış sınavlar (2021 Final, 2022 Bütünleme)
 - `/practice` → Kısa uygulama soruları ve hızlı sözlük
 - `/assets` → CSS ve JavaScript dosyaları
-
-## Amaç
-
-Bu proje:
-- Sınava hazırlanmayı kolaylaştırmak
-- Kavramları **tanım → mantık → örnek → sık hata** şeklinde öğretmek
-- Tek bir yerde **derli toplu** PDK kaynağı sunmak
-
-amacıyla hazırlanmıştır.
-
 
 ## Kullanılan Teknolojiler
 
