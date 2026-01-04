@@ -1,4 +1,4 @@
-# 📘 Programlama Dilleri Kavramları – Çıkmış Sorular ve Notlar
+# Programlama Dilleri Kavramları – Çıkmış Sorular ve Notlar
 
 Bu repository, **Programlama Dilleri Kavramları (PDK)** dersi için hazırlanmış;
 - Çıkmış sınav soruları
@@ -10,14 +10,14 @@ Bu repository, **Programlama Dilleri Kavramları (PDK)** dersi için hazırlanm�
 içeren **bir çalışma platformudur**.
 
 
-## 🌐 Canlı Site (GitHub Pages)
+## Canlı Site (GitHub Pages)
 
-👉 **https://codewithfey.github.io/Programlama-dili-kavramlari-notlar-/**
+**https://codewithfey.github.io/Programlama-dili-kavramlari-notlar-/**
 
 Tüm içeriklere tarayıcı üzerinden erişilebilir.
 
 
-## 📂 İçerik Yapısı
+## İçerik Yapısı
 
 - `/units` → Ders üniteleri (kitap akışına uygun)
 - `/topics` → Derinlemesine konular (OOP, paradigmalar vb.)
@@ -25,7 +25,7 @@ Tüm içeriklere tarayıcı üzerinden erişilebilir.
 - `/practice` → Kısa uygulama soruları ve hızlı sözlük
 - `/assets` → CSS ve JavaScript dosyaları
 
-## 🎯 Amaç
+## Amaç
 
 Bu proje:
 - Sınava hazırlanmayı kolaylaştırmak
@@ -35,7 +35,7 @@ Bu proje:
 amacıyla hazırlanmıştır.
 
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 - HTML5
 - CSS3
@@ -43,7 +43,7 @@ amacıyla hazırlanmıştır.
 - GitHub Pages
 
 
-# 📘 Programming Languages Concepts – Study Notes (EN)
+# Programming Languages Concepts – Study Notes (EN)
 
 This repository contains a **static study platform** for the course *Programming Languages Concepts*, including:
 - Exam questions
