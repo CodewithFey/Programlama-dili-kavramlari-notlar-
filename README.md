@@ -16,6 +16,8 @@ içeren **bir çalışma platformudur**.
 
 Tüm içeriklere tarayıcı üzerinden erişilebilir.
 
+Çıkmış Sorular için : https://pdkcikmislar.netlify.app/
+
 
 ## İçerik Yapısı
 
