@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kısa Uygulamalar | PDK Çıkmışları</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="brand">
+                    <h1>PDK Çıkmışları</h1>
+                    <p>Programlama Dilleri Kavramları için kitap akışıyla hazırlanmış notlar ve çıkmış sorular.</p>
+                    <p><a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank" style="padding: 5px 10px; display: inline-block; text-decoration: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Feyza</a></p>
+                </div>
+                <div class="search" title="Menüde arama">
+                    <input id="navSearch" type="text" placeholder="" />
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-title="Ana Sayfa">Ana Sayfa</a>
+                    <a href="../exams/2021-final.html" data-title="Çıkmış: 20/01/2021 Final">Çıkmış: 20/01/2021 Final</a>
+                    <a href="../exams/2022-butunleme.html" data-title="Çıkmış: 03/02/2022 Bütünleme">Çıkmış: 03/02/2022 Bütünleme</a>
+                    <a href="../practice/kisa-uygulamalar.html" data-title="Kısa Uygulamalar">Kısa Uygulamalar</a>
+                    <a href="../practice/sozluk.html" data-title="Hızlı Sözlük">Hızlı Sözlük</a>
+                    <div class="sep"></div>
+                    <a href="../units/ch-01.html" data-title="Ünite 1: Giriş">Ünite 1: Giriş</a>
+                    <a href="../units/ch-02.html" data-title="Ünite 2: Tarihsel İnceleme">Ünite 2: Tarihsel İnceleme</a>
+                    <a href="../units/ch-03.html" data-title="Ünite 3: Tipler, Değerler ve Bildirimler">Ünite 3: Tipler, Değerler ve Bildirimler</a>
+                    <a href="../units/ch-04.html" data-title="Ünite 4: İfadeler ve Deyimler">Ünite 4: İfadeler ve Deyimler</a>
+                    <a href="../units/ch-05.html" data-title="Ünite 5: Program Yapısı">Ünite 5: Program Yapısı</a>
+                    <a href="../units/ch-06.html" data-title="Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar">Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar</a>
+                    <a href="../units/ch-07.html" data-title="Ünite 7: Yapısal Veri">Ünite 7: Yapısal Veri</a>
+                    <a href="../units/ch-08.html" data-title="Ünite 8: Kalıtım ve Dinamik Bağlama">Ünite 8: Kalıtım ve Dinamik Bağlama</a>
+                    <a href="../units/ch-09.html" data-title="Ünite 9: Fonksiyonel Diller">Ünite 9: Fonksiyonel Diller</a>
+                    <a href="../topics/oop.html" data-title="OOP Derinlemesine">OOP Derinlemesine</a>
+                    <a href="../units/ch-10.html" data-title="Ünite 10: Mantıksal Programlama">Ünite 10: Mantıksal Programlama</a>
+                    <a href="../units/ch-11.html" data-title="Ünite 11: Eşzamanlılık ve Ağ">Ünite 11: Eşzamanlılık ve Ağ</a>
+                    <a href="../units/ch-12.html" data-title="Ünite 12: Sözdizimi ve Anlambilim">Ünite 12: Sözdizimi ve Anlambilim</a>
+                    <a href="../units/ch-13.html" data-title="Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)">Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)</a>
+                    <a href="../units/ch-14.html" data-title="Ünite 14: Gelecek">Ünite 14: Gelecek</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+                <h2>Kısa Uygulama Soruları</h2>
+                <p>Bu bölüm, hocanın “kısa uygulama” tarzı sorularına göre hazırlanmıştır. Kodlar <strong>C ağırlıklı</strong>; gerektiğinde Python eklenmiştir.</p>
+
+                <h3>Soru 1 — evenNumbers fonksiyonu</h3>
+                <p><strong>İstenen:</strong> Bir listede/dizide gezerken çift sayıları ayrı bir listeye ekleyen fonksiyon.</p>
+
+                <div class="grid2">
+                    <div class="card">
+                        <h3>C (dinamik dizi mantığı basit tutuldu)</h3>
+                        <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int is_even(int x) { return x % 2 == 0; }
+
+int main() {
+    int arr[] = {3, 10, 7, 8, 12, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int even[100];  // basitlik için sabit kapasite
+    int k = 0;
+
+    for (int i = 0; i &lt; n; i++) {
+        if (is_even(arr[i])) {
+            even[k++] = arr[i];
+        }
+    }
+
+    printf("Ciftler: ");
+    for (int i = 0; i &lt; k; i++) printf("%d ", even[i]);
+    printf("\n");
+    return 0;
+}</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Python (liste üretimi)</h3>
+                        <pre><code class="language-python">nums = [3, 10, 7, 8, 12, 5]
+even_numbers = [x for x in nums if x % 2 == 0]
+print(even_numbers)</code></pre>
+                    </div>
+                </div>
+
+                <h3>Soru 2 — Personel / Muhendis: overload ve override</h3>
+                <p><strong>İstenen:</strong> Overload = aynı isim, farklı parametre; Override = alt sınıfın virtual metodu ezmesi.</p>
+
+                <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class Personel {
+public:
+    // overload: ayni isim, farkli parametre listesi
+    double maasHesapla(double taban) { return taban; }
+    double maasHesapla(double taban, double prim) { return taban + prim; }
+
+    // override icin virtual
+    virtual void yazdir() { cout &lt;&lt; "Personel\n"; }
+};
+
+class Muhendis : public Personel {
+public:
+    void yazdir() override { cout &lt;&lt; "Muhendis\n"; } // override
+};
+
+int main() {
+    Personel p;
+    cout &lt;&lt; p.maasHesapla(30000) &lt;&lt; "\n";
+    cout &lt;&lt; p.maasHesapla(30000, 5000) &lt;&lt; "\n";
+
+    Personel *ref = new Muhendis();
+    ref-&gt;yazdir(); // Muhendis
+    delete ref;
+}</code></pre>
+
+                <p><strong>Python ek (override)</strong>:</p>
+                <pre><code class="language-python">class Personel:
+    def yazdir(self):
+        print("Personel")
+
+class Muhendis(Personel):
+    def yazdir(self):
+        print("Muhendis")  # override</code></pre>
+
+                <h3>Soru 3 — C'de dikdörtgen alan/çevre + gcc komutu</h3>
+                <p><strong>İstenen:</strong> Yapısal programlama + ayrı derleme: header, source, main.</p>
+
+                <pre><code class="language-c">// fonksiyon.h
+#ifndef FONKSIYON_H
+#define FONKSIYON_H
+float alan(float g, float y);
+float cevre(float g, float y);
+#endif</code></pre>
+
+                <pre><code class="language-c">// fonksiyon.c
+#include "fonksiyon.h"
+float alan(float g, float y)  { return g * y; }
+float cevre(float g, float y) { return 2 * (g + y); }</code></pre>
+
+                <pre><code class="language-c">// main.c
+#include &lt;stdio.h&gt;
+#include "fonksiyon.h"
+
+int main() {
+    float g = 5, y = 3;
+    printf("Alan: %.2f\n", alan(g,y));
+    printf("Cevre: %.2f\n", cevre(g,y));
+    return 0;
+}</code></pre>
+
+                <pre><code class="language-bash">gcc -c fonksiyon.c
+gcc -c main.c
+gcc main.o fonksiyon.o -o dikdortgen
+./dikdortgen</code></pre>
+
+                <h3>Soru 4 — C# veya Java: local / global variable</h3>
+                <p><strong>Local (yerel) değişken:</strong> Bir metodun içinde tanımlanır; sadece o blokta görünür ve metod bitince ömrü biter.</p>
+                <p><strong>Global (sınıf alanı / field):</strong> Sınıf seviyesinde tanımlanır; metodlar tarafından erişilebilir ve nesne yaşadığı sürece (veya static ise program boyunca) var olur.</p>
+
+                <pre><code class="language-csharp">using System;
+
+class Ornek
+{
+    // "global" gibi düşünebilirsin: sınıf alanı (field)
+    static int globalSayi = 100;
+
+    static void Yazdir()
+    {
+        int localSayi = 5; // local: sadece bu metod içinde
+        Console.WriteLine(localSayi);
+        Console.WriteLine(globalSayi);
+    }
+
+    static void Main()
+    {
+        Yazdir();
+        // Console.WriteLine(localSayi); // HATA: localSayi burada yok
+        Console.WriteLine(globalSayi);   // OK
+    }
+}</code></pre>
+
+                <p><strong>Python notu:</strong> Python'da “global” kelimesiyle fonksiyon dışındaki değişkene yazmak için <span class="inline">global</span> anahtar sözcüğü gerekir.</p>
+
+                <h3>Soru 5 — C++ referans iletimi göster</h3>
+                <p><strong>İstenen:</strong> Referans ile parametre geçirince fonksiyon, çağıranın değişkenini değiştirir.</p>
+
+                <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+void kareYap(int &x) { // referans
+    x = x * x;
+}
+
+int main() {
+    int a = 6;
+    kareYap(a);
+    cout &lt;&lt; a &lt;&lt; "\n"; // 36
+}</code></pre>
+
+                <h3>Bonus — “çıktı” sorularında kritik nokta (yan etki + değerlendirme sırası)</h3>
+                <p>Hocanın verdiği şu tarz sorulara dikkat:</p>
+
+                <pre><code class="language-c">int fun(int *k) {
+    *k += 4;
+    return 3 * (*k) - 1;
+}
+
+int main() {
+    int i = 10, sum1;
+    sum1 = (i / 2) + fun(&i);
+    printf("%d\n", sum1);
+}</code></pre>
+
+                <div class="callout">
+                    <strong>Neden tricky?</strong> C'de ifadelerin içindeki operandların değerlendirme sırası (sol mu önce, sağ mı önce) <em>çoğu operatörde belirtilmemiştir</em>. Bu örnekte <span class="inline">i</span> hem okunuyor (i/2) hem de
+                    <span
+                        class="inline">fun(&i)</span> içinde değiştiriliyor; arada “sequence point” olmadığı için sonuç derleyiciye göre değişebilir (teknik olarak tanımsız davranış).
+                        <br/><br/>
+                        <strong>Sınav pratiği:</strong> Hoca genelde “soldan sağa” varsayımıyla bekler. Ama açıklamada mutlaka “C'de evaluation order garanti değil” notunu yazmak seni güçlendirir.
+                </div>
+
+                <footer>
+                    <div><strong>Made by <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank">Feyza</a></strong> <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+                    <div class="small"></div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
+
+

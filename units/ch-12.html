@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ünite 12: Exception Handling | PDK Çıkmışları</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="brand">
+                    <h1>PDK Çıkmışları</h1>
+                    <p>Programlama Dilleri Kavramları için kitap akışıyla hazırlanmış notlar ve çıkmış sorular.</p>
+                    <p><a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank" style="padding: 5px 10px; display: inline-block; text-decoration: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Feyza</a></p>
+                </div>
+                <div class="search" title="Menüde arama">
+                    <input id="navSearch" type="text" placeholder="" />
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-title="Ana Sayfa">Ana Sayfa</a>
+                    <a href="../exams/2021-final.html" data-title="Çıkmış: 20/01/2021 Final">Çıkmış: 20/01/2021 Final</a>
+                    <a href="../exams/2022-butunleme.html" data-title="Çıkmış: 03/02/2022 Bütünleme">Çıkmış: 03/02/2022 Bütünleme</a>
+                    <a href="../practice/kisa-uygulamalar.html" data-title="Kısa Uygulamalar">Kısa Uygulamalar</a>
+                    <a href="../practice/sozluk.html" data-title="Hızlı Sözlük">Hızlı Sözlük</a>
+                    <div class="sep"></div>
+                    <a href="../units/ch-01.html" data-title="Ünite 1: Giriş">Ünite 1: Giriş</a>
+                    <a href="../units/ch-02.html" data-title="Ünite 2: Tarihsel İnceleme">Ünite 2: Tarihsel İnceleme</a>
+                    <a href="../units/ch-03.html" data-title="Ünite 3: Tipler, Değerler ve Bildirimler">Ünite 3: Tipler, Değerler ve Bildirimler</a>
+                    <a href="../units/ch-04.html" data-title="Ünite 4: İfadeler ve Deyimler">Ünite 4: İfadeler ve Deyimler</a>
+                    <a href="../units/ch-05.html" data-title="Ünite 5: Program Yapısı">Ünite 5: Program Yapısı</a>
+                    <a href="../units/ch-06.html" data-title="Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar">Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar</a>
+                    <a href="../units/ch-07.html" data-title="Ünite 7: Yapısal Veri">Ünite 7: Yapısal Veri</a>
+                    <a href="../units/ch-08.html" data-title="Ünite 8: Kalıtım ve Dinamik Bağlama">Ünite 8: Kalıtım ve Dinamik Bağlama</a>
+                    <a href="../units/ch-09.html" data-title="Ünite 9: Fonksiyonel Diller">Ünite 9: Fonksiyonel Diller</a>
+                    <a href="../topics/oop.html" data-title="OOP Derinlemesine">OOP Derinlemesine</a>
+                    <a href="../units/ch-10.html" data-title="Ünite 10: Mantıksal Programlama">Ünite 10: Mantıksal Programlama</a>
+                    <a href="../units/ch-11.html" data-title="Ünite 11: Eşzamanlılık ve Ağ">Ünite 11: Eşzamanlılık ve Ağ</a>
+                    <a href="../units/ch-12.html" data-title="Ünite 12: Sözdizimi ve Anlambilim">Ünite 12: Sözdizimi ve Anlambilim</a>
+                    <a href="../units/ch-13.html" data-title="Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)">Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)</a>
+                    <a href="../units/ch-14.html" data-title="Ünite 14: Gelecek">Ünite 14: Gelecek</a>
+                </nav>
+            </aside>
+            <main class="main">
+                <h2>Ünite 12: Exception Handling</h2>
+
+                <p>Bu ünite, program çalışırken oluşan hataların <strong>kontrollü biçimde yakalanması</strong> (handle edilmesi) konusunu anlatır. Sınavda genelde iki tarz soru gelir: (1) <em>try/catch mantığını anlat</em> (2) <em>C’de neden zordur?</em></p>
+
+                <div class="callout"><strong>Altın cümle:</strong> Exception handling, “hata olunca programı çökertmek yerine, hatayı yakalayıp güvenli bir yola sapmak”tır.</div>
+
+                <h3>12.1 Neden gerekir?</h3>
+                <ul>
+                    <li>Dosya bulunamadı (FileNotFound)</li>
+                    <li>Sıfıra bölme</li>
+                    <li>Ağ bağlantısı koptu</li>
+                    <li>Bellek yetersiz</li>
+                </ul>
+
+                <h3>12.2 C# ile try / catch / finally</h3>
+                <pre><code class="language-csharp">class Program
+{
+  static void Main()
+  {
+    try
+    {
+      Console.Write("a: ");
+      int a = int.Parse(Console.ReadLine());
+
+      Console.Write("b: ");
+      int b = int.Parse(Console.ReadLine());
+
+      // Hata: b=0 ise DivideByZeroException
+      int c = a / b;
+      Console.WriteLine("Sonuç: " + c);
+    }
+    catch (DivideByZeroException)
+    {
+      Console.WriteLine("Sıfıra bölme hatası!");
+    }
+    catch (FormatException)
+    {
+      Console.WriteLine("Sayı girişi bekleniyordu.");
+    }
+    finally
+    {
+      // Hata olsa da olmasa da çalışır: kaynak kapatma, log, vb.
+      Console.WriteLine("Program bitti.");
+    }
+  }
+}</code></pre>
+
+                <p><strong>finally</strong> özellikle “dosya açtım → mutlaka kapatmalıyım” gibi durumlarda kritiktir.</p>
+
+                <h3>12.3 Python ile try / except / finally</h3>
+                <pre><code class="language-python">try:
+    a = int(input("a: "))
+    b = int(input("b: "))
+    print("Sonuç:", a // b)
+except ZeroDivisionError:
+    print("Sıfıra bölme hatası!")
+except ValueError:
+    print("Sayı girişi bekleniyordu.")
+finally:
+    print("Program bitti.")</code></pre>
+
+                <h3>12.4 C’de exception yok: nasıl yönetilir?</h3>
+                <p>C’de <code>try/catch</code> yoktur. Bu yüzden hatalar genelde şu yollarla yönetilir:</p>
+                <ul>
+                    <li><strong>Dönüş değeri</strong> ile hata kodu dönmek</li>
+                    <li><strong>errno</strong> ile hata bilgisini okumak</li>
+                    <li>Nadiren: <strong>setjmp/longjmp</strong> ile kontrol sıçratmak (riskli)</li>
+                </ul>
+
+                <h4>(a) Dönüş değeriyle hata</h4>
+                <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int bol(int a, int b, int *sonuc){
+  if(b == 0) return 0;     // 0 = hata
+  *sonuc = a / b;
+  return 1;                // 1 = başarılı
+}
+
+int main(){
+  int out;
+  if(!bol(10, 0, &out)){
+    printf("Hata: b=0\n");
+  } else {
+    printf("Sonuç=%d\n", out);
+  }
+}</code></pre>
+
+                <h4>(b) errno örneği</h4>
+                <pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(){
+  char *end;
+  long x = strtol("12x", &end, 10);
+  if(end == NULL || *end != '\0'){
+    printf("Hatalı sayı: %s\n", end);
+  }
+  if(errno == ERANGE){
+    printf("Aralık dışı!\n");
+  }
+}</code></pre>
+
+                <h3>12.5 Sık yapılan hatalar</h3>
+                <ul>
+                    <li>catch bloklarını “genel”den “özel”e yazmak (C#/Java’da bazı durumlarda engel olur)</li>
+                    <li>finally/with kullanmamak → kaynak sızıntısı</li>
+                    <li>C’de hata kodu kontrolünü atlamak</li>
+                </ul>
+
+                <h3>12.6 Çıkabilecek soru + cevap</h3>
+                <ol>
+                    <li><strong>Exception handling nedir?</strong><br/> Beklenmedik durumları yakalayıp programı güvenli şekilde devam ettirme mekanizmasıdır.</li>
+                    <li><strong>C’de neden zordur?</strong><br/> Dil düzeyinde try/catch yoktur; dönüş değeri/errno gibi manuel yöntemlerle yapılır.</li>
+                </ol>
+
+                <h3>12.7 Mini Test</h3>
+                <ol>
+                    <li>finally ne zaman çalışır?</li>
+                    <li>C’de exception benzeri kontrol sıçraması hangi ikiliyle yapılabilir?</li>
+                </ol>
+                <p><strong>Cevap:</strong> (1) her durumda (2) setjmp/longjmp</p>
+                <footer>
+                    <div><strong>Made by <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank">Feyza</a></strong> <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+                    <div class="small"></div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
+
+

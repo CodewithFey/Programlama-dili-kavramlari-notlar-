@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ünite 4: İfadeler ve Deyimler | PDK Çıkmışları</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="brand">
+                    <h1>PDK Çıkmışları</h1>
+                    <p>Programlama Dilleri Kavramları için kitap akışıyla hazırlanmış notlar ve çıkmış sorular.</p>
+                    <p><a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank" style="padding: 5px 10px; display: inline-block; text-decoration: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Feyza</a></p>
+                </div>
+                <div class="search" title="Menüde arama">
+                    <input id="navSearch" type="text" placeholder="" />
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-title="Ana Sayfa">Ana Sayfa</a>
+                    <a href="../exams/2021-final.html" data-title="Çıkmış: 20/01/2021 Final">Çıkmış: 20/01/2021 Final</a>
+                    <a href="../exams/2022-butunleme.html" data-title="Çıkmış: 03/02/2022 Bütünleme">Çıkmış: 03/02/2022 Bütünleme</a>
+                    <a href="../practice/kisa-uygulamalar.html" data-title="Kısa Uygulamalar">Kısa Uygulamalar</a>
+                    <a href="../practice/sozluk.html" data-title="Hızlı Sözlük">Hızlı Sözlük</a>
+                    <div class="sep"></div>
+                    <a href="../units/ch-01.html" data-title="Ünite 1: Giriş">Ünite 1: Giriş</a>
+                    <a href="../units/ch-02.html" data-title="Ünite 2: Tarihsel İnceleme">Ünite 2: Tarihsel İnceleme</a>
+                    <a href="../units/ch-03.html" data-title="Ünite 3: Tipler, Değerler ve Bildirimler">Ünite 3: Tipler, Değerler ve Bildirimler</a>
+                    <a href="../units/ch-04.html" data-title="Ünite 4: İfadeler ve Deyimler">Ünite 4: İfadeler ve Deyimler</a>
+                    <a href="../units/ch-05.html" data-title="Ünite 5: Program Yapısı">Ünite 5: Program Yapısı</a>
+                    <a href="../units/ch-06.html" data-title="Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar">Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar</a>
+                    <a href="../units/ch-07.html" data-title="Ünite 7: Yapısal Veri">Ünite 7: Yapısal Veri</a>
+                    <a href="../units/ch-08.html" data-title="Ünite 8: Kalıtım ve Dinamik Bağlama">Ünite 8: Kalıtım ve Dinamik Bağlama</a>
+                    <a href="../units/ch-09.html" data-title="Ünite 9: Fonksiyonel Diller">Ünite 9: Fonksiyonel Diller</a>
+                    <a href="../topics/oop.html" data-title="OOP Derinlemesine">OOP Derinlemesine</a>
+                    <a href="../units/ch-10.html" data-title="Ünite 10: Mantıksal Programlama">Ünite 10: Mantıksal Programlama</a>
+                    <a href="../units/ch-11.html" data-title="Ünite 11: Eşzamanlılık ve Ağ">Ünite 11: Eşzamanlılık ve Ağ</a>
+                    <a href="../units/ch-12.html" data-title="Ünite 12: Sözdizimi ve Anlambilim">Ünite 12: Sözdizimi ve Anlambilim</a>
+                    <a href="../units/ch-13.html" data-title="Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)">Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)</a>
+                    <a href="../units/ch-14.html" data-title="Ünite 14: Gelecek">Ünite 14: Gelecek</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+                <h2>Ünite 4 — İfadeler ve Deyimler <span class="small">(Expressions and statements)</span></h2>
+                <p>Bu ünite, “kodun <strong>ne zaman</strong> neyi hesapladığı” ile ilgilidir. Sınavda en çok şu tip sorular gelir:</p>
+                <ul>
+                    <li>İşlem önceliği (precedence) / ilişkililik (associativity)</li>
+                    <li>Yan etki (side effect) ve değerlendirme sırası (evaluation order)</li>
+                    <li>Pointer ile yapılan güncellemenin ifadeye etkisi (çıktı soruları)</li>
+                </ul>
+
+                <h3>4.1 Expressions — İfadeler</h3>
+                <p><strong>İfade</strong>: bir değer üreten parça. Örn: <code>a + b</code>, <code>f(x)</code>, <code>*p</code>.</p>
+
+                <h4>İşlem önceliği kısa özeti (C)</h4>
+                <ul>
+                    <li>Parantez <code>()</code> her şeyi kontrol eder.</li>
+                    <li>Çarpma/bölme <code>* / %</code> toplama/çıkarma <code>+ -</code>’dan önce gelir.</li>
+                    <li>Atama <code>=</code> en sonda çalışır.</li>
+                </ul>
+
+                <h4>Yan etki (side effect)</h4>
+                <p><code>i++</code>, <code>*p = 5</code> gibi işlemler programın durumunu değiştirir. Yan etki varsa, ifadeyi okurken “bu ifade sadece değer mi üretiyor, yoksa <em>değiştiriyor mu</em>?” diye sor.</p>
+
+                <h3>4.2 Statements — Deyimler</h3>
+                <p><strong>Deyim</strong>: genelde program akışını kontrol eder. Örn: <code>if</code>, <code>while</code>, <code>return</code>, <code>break</code>.</p>
+
+                <h3>ÇIKTI SORUSU MANTIĞI: Pointer + değerlendirme sırası</h3>
+                <p>Senin çıktısı istenen sorunda kilit nokta şu:</p>
+                <ol>
+                    <li><code>fun(&i)</code> çağrısı <strong>i’yi değiştiriyor</strong> (pointer ile).</li>
+                    <li>Aynı değişken, aynı satırda hem <code>i/2</code> hem <code>fun(&i)</code> içinde kullanılıyor.</li>
+                    <li>Bu iki parçanın hangi sırayla hesaplanacağı sonucu etkiler.</li>
+                </ol>
+
+                <div class="callout">
+                    <strong>Önemli:</strong> C standartlarında bazı ifadelerde değerlendirme sırası “garanti edilmez”. Bu yüzden sınavlar genelde ya açık sıraya sahip örnek verir ya da “derleyici şu sırayla hesaplıyor varsay” gibi düşünür. En güvenli
+                    yaklaşım: ifadeyi adım adım parçala.
+                </div>
+
+                <h4>Verilen örnek (C)</h4>
+                <pre><code class="language-c">int fun(int *k) {
+    *k += 4;
+    return 3 * (*k) - 1;
+}
+
+int main() {
+    int i = 10, j = 10, sum1, sum2;
+
+    sum1 = (i / 2) + fun(&i);
+    sum2 = fun(&j) + (j / 2);
+
+    printf("sum1: %d\t sum2: %d\n", sum1, sum2);
+}</code></pre>
+
+                <h4>Adım adım hesap (güvenli yöntem)</h4>
+                <ul>
+                    <li>Başta <code>i=10</code>. <code>fun(&i)</code> çağrılınca: <code>i = 10 + 4 = 14</code>, dönüş: <code>3*14 - 1 = 41</code>.</li>
+                    <li><code>i/2</code> ifadesi, çağrıdan <em>önce</em> hesaplanırsa: <code>10/2 = 5</code> → <code>sum1 = 5 + 41 = 46</code>.</li>
+                    <li><code>j=10</code>. <code>fun(&j)</code> → <code>j=14</code>, dönüş <code>41</code>.</li>
+                    <li><code>j/2</code> çağrıdan <em>sonra</em> hesaplanırsa: <code>14/2 = 7</code> → <code>sum2 = 41 + 7 = 48</code>.</li>
+                </ul>
+
+                <h4>Neden Python ekledim?</h4>
+                <p>Python burada “çıktı sorusunu çözmek için şart” değil; ama <strong>aynı mantığı daha görünür</strong> yapmak için iyi: fonksiyonun yan etkisini ve sıraya göre değişimi daha rahat gözleyebilirsin.</p>
+
+                <pre><code class="language-python">def fun_box(box):
+    box[0] += 4
+    return 3 * box[0] - 1
+
+i = [10]
+sum1 = (i[0] // 2) + fun_box(i)  # önce i//2, sonra fun (soldan sağa)
+print("sum1:", sum1, "i:", i[0])</code></pre>
+
+                <div class="callout">
+                    Python’da ifadeler soldan sağa değerlendirilir; bu yüzden çıktıyı daha deterministik görürsün. C’de ise bu tarz sorularda “ifadeyi parçala” tek güvenli yoldur.
+                </div>
+
+                <h3>Mini test</h3>
+                <ol>
+                    <li>Yan etki (side effect) nedir? 2 örnek yaz.</li>
+                    <li>Pointer ile parametre gönderince neden orijinal değişken değişebilir?</li>
+                    <li>Çıktı sorularında en güvenli çözüm stratejisi nedir?</li>
+                </ol>
+
+
+                <footer>
+                    <div><strong>Made by <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank">Feyza</a></strong> <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+                    <div class="small"></div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
+
+

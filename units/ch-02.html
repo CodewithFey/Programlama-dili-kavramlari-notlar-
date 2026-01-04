@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ünite 2: Tarihsel İnceleme | PDK Çıkmışları</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="brand">
+                    <h1>PDK Çıkmışları</h1>
+                    <p>Programlama Dilleri Kavramları için kitap akışıyla hazırlanmış notlar ve çıkmış sorular.</p>
+                    <p><a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank" style="padding: 5px 10px; display: inline-block; text-decoration: none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Feyza</a></p>
+                </div>
+                <div class="search" title="Menüde arama">
+                    <input id="navSearch" type="text" placeholder="" />
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" data-title="Ana Sayfa">Ana Sayfa</a>
+                    <a href="../exams/2021-final.html" data-title="Çıkmış: 20/01/2021 Final">Çıkmış: 20/01/2021 Final</a>
+                    <a href="../exams/2022-butunleme.html" data-title="Çıkmış: 03/02/2022 Bütünleme">Çıkmış: 03/02/2022 Bütünleme</a>
+                    <a href="../practice/kisa-uygulamalar.html" data-title="Kısa Uygulamalar">Kısa Uygulamalar</a>
+                    <a href="../practice/sozluk.html" data-title="Hızlı Sözlük">Hızlı Sözlük</a>
+                    <div class="sep"></div>
+                    <a href="../units/ch-01.html" data-title="Ünite 1: Giriş">Ünite 1: Giriş</a>
+                    <a href="../units/ch-02.html" data-title="Ünite 2: Tarihsel İnceleme">Ünite 2: Tarihsel İnceleme</a>
+                    <a href="../units/ch-03.html" data-title="Ünite 3: Tipler, Değerler ve Bildirimler">Ünite 3: Tipler, Değerler ve Bildirimler</a>
+                    <a href="../units/ch-04.html" data-title="Ünite 4: İfadeler ve Deyimler">Ünite 4: İfadeler ve Deyimler</a>
+                    <a href="../units/ch-05.html" data-title="Ünite 5: Program Yapısı">Ünite 5: Program Yapısı</a>
+                    <a href="../units/ch-06.html" data-title="Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar">Ünite 6: Prosedürler, Fonksiyonlar ve Metotlar</a>
+                    <a href="../units/ch-07.html" data-title="Ünite 7: Yapısal Veri">Ünite 7: Yapısal Veri</a>
+                    <a href="../units/ch-08.html" data-title="Ünite 8: Kalıtım ve Dinamik Bağlama">Ünite 8: Kalıtım ve Dinamik Bağlama</a>
+                    <a href="../units/ch-09.html" data-title="Ünite 9: Fonksiyonel Diller">Ünite 9: Fonksiyonel Diller</a>
+                    <a href="../topics/oop.html" data-title="OOP Derinlemesine">OOP Derinlemesine</a>
+                    <a href="../units/ch-10.html" data-title="Ünite 10: Mantıksal Programlama">Ünite 10: Mantıksal Programlama</a>
+                    <a href="../units/ch-11.html" data-title="Ünite 11: Eşzamanlılık ve Ağ">Ünite 11: Eşzamanlılık ve Ağ</a>
+                    <a href="../units/ch-12.html" data-title="Ünite 12: Sözdizimi ve Anlambilim">Ünite 12: Sözdizimi ve Anlambilim</a>
+                    <a href="../units/ch-13.html" data-title="Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)">Ünite 13: Giriş/Çıkış ve Grafik Arayüzler (GUI)</a>
+                    <a href="../units/ch-14.html" data-title="Ünite 14: Gelecek">Ünite 14: Gelecek</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+                <h2>Ünite 2 — Tarihsel İnceleme <span class="small">(Historical survey)</span></h2>
+                <p>Bu ünite, programlama dillerinin “neden böyle” olduğunu anlamak için tarihsel bir çerçeve kurar. Sınavda bu bölüm genelde <strong>paradigmaların doğuşu</strong>, <strong>dil özelliklerinin motivasyonu</strong> ve
+                    <strong>“hangi problem hangi dil özelliğini doğurdu?”</strong> şeklinde sorulur.</p>
+
+                <div class="callout">
+                    <strong>Akılda kalsın:</strong> Donanım (makine) kısıtları → dil tasarımı → yazılım mühendisliği ihtiyaçları. Tarih boyunca diller, o dönemin baskın problemine “pratik” bir çözüm olarak doğdu.
+                </div>
+
+                <h3>2.1 Early machines — İlk makineler</h3>
+                <ul>
+                    <li><strong>Durum:</strong> İlk dönemlerde programlar makine kodu/assembly seviyesinde yazılıyordu.</li>
+                    <li><strong>Problemler:</strong> taşınabilirlik yok, bakım zor, hata ayıklama çok maliyetli.</li>
+                    <li><strong>Sonuç:</strong> “insana daha yakın” notasyon ihtiyacı → yüksek seviyeli diller.</li>
+                </ul>
+
+                <h3>2.2 Fortran — Sayısal hesaplama devrimi</h3>
+                <p>Fortran’ın temel motivasyonu: <strong>mühendislik/ bilimsel hesaplamayı</strong> daha hızlı geliştirmek. Burada iki büyük fikir çıkar:</p>
+                <ul>
+                    <li><strong>Derleyici optimizasyonu:</strong> Yüksek seviyeli kodun hızlı makine koduna dönüşmesi.</li>
+                    <li><strong>Döngüler / diziler:</strong> Sayısal hesaplamanın bel kemiği.</li>
+                </ul>
+
+                <h4>Mini örnek: Döngü fikri (C)</h4>
+                <pre><code class="language-c">// Döngüler: sayısal işlerin omurgası
+#include &lt;stdio.h&gt;
+
+int main() {
+    double sum = 0.0;
+    for (int i = 1; i &lt;= 100; i++) {
+        sum += 1.0 / i;
+    }
+    printf("sum=%.6f\n", sum);
+    return 0;
+}</code></pre>
+
+                <h4>Aynı fikir (Python)</h4>
+                <pre><code class="language-python">sum_ = 0.0
+for i in range(1, 101):
+    sum_ += 1.0 / i
+print(f"sum={sum_:.6f}")</code></pre>
+
+                <h3>2.3 Algol — Yapısallık, bloklar, kapsam</h3>
+                <p>Algol ailesi (Algol60 vb.) ile çok kritik kavramlar popülerleşti:</p>
+                <ul>
+                    <li><strong>Blok yapısı</strong> (begin/end benzeri) ve <strong>lexical/static scope</strong></li>
+                    <li><strong>BNF</strong> ile sözdizimi tanımlama kültürü</li>
+                    <li><strong>Algoritma anlatımı</strong> için daha temiz yapı</li>
+                </ul>
+                <p>Bu kısım sınavda doğrudan “<strong>statik kapsam nedir?</strong>” gibi sorulara bağlanır.</p>
+
+                <h3>2.4 Business data processing languages — İş verisi odaklı diller</h3>
+                <p>İş dünyası, sayısal hesaplardan farklı olarak <strong>kayıt/fiş/fatura</strong> gibi veri yoğun işleri çözüyor: bu yüzden <strong>kayıt (record)</strong>, <strong>dosya</strong>, <strong>raporlama</strong> gibi özellikler öne çıktı.</p>
+
+                <h3>2.5 General or multipurpose languages — Genel amaçlı diller</h3>
+                <p>Tek bir alana değil, birçok alana hizmet eden dillerin hedefi:
+                    <strong>taşınabilirlik + üretkenlik + makul performans</strong>. C/C++ bu çizgide çok güçlü örneklerdir.</p>
+
+                <h3>2.6 Developing programs interactively — Etkileşimli geliştirme</h3>
+                <p>Bu başlık, “edit-compile-run” döngüsünün ağır olduğu dönemlere tepki olarak gelişen yaklaşımları kapsar: REPL, yorumlayıcılar, hızlı prototipleme.</p>
+                <ul>
+                    <li><strong>Python</strong> burada klasik örnek: hızlı dene–gör.</li>
+                    <li><strong>C</strong> daha çok derleme ve bağlama adımlarıyla ilerler.</li>
+                </ul>
+
+                <h3>2.7 Special-purpose languages — Özel amaçlı diller</h3>
+                <p>Belirli problem sınıfları için “en iyi” ifade gücü: SQL (sorgu), Prolog (mantık), MATLAB (matris), Regex (desen).</p>
+
+                <h3>2.8 Systems programming languages — Sistem programlama dilleri</h3>
+                <p>İşletim sistemi, sürücü, derleyici gibi düşük seviye yazılımlar için:</p>
+                <ul>
+                    <li><strong>Doğrudan bellek kontrolü</strong> (pointer)</li>
+                    <li><strong>Deterministik performans</strong></li>
+                    <li><strong>Düşük seviye erişim</strong></li>
+                </ul>
+                <p>Bu yüzden C, “sistem programlama” denince en güçlü tarihsel örnektir.</p>
+
+                <h3>2.9 Modules, classes and abstract data types — Modüller / sınıflar / ADT</h3>
+                <p>Zamanla programlar büyüdükçe <strong>modülerlik</strong> zorunlu oldu.</p>
+                <ul>
+                    <li><strong>Modül</strong>: birim bir dosya/ paket gibi düşün.</li>
+                    <li><strong>ADT (Soyut Veri Tipi)</strong>: “ne yapar?”ı dışarı aç, “nasıl yapar?”ı gizle.</li>
+                    <li><strong>Sınıf</strong>: veri + davranışı aynı yapıda toplar (OOP).</li>
+                </ul>
+
+                <h4>ADT fikri (C'de header + .c)</h4>
+                <pre><code class="language-c">// stack.h — dışarı görünen arayüz (NE yapıyor?)
+#ifndef STACK_H
+#define STACK_H
+
+void push(int x);
+int pop(void);
+
+#endif</code></pre>
+
+                <pre><code class="language-c">// stack.c — içerideki uygulama (NASIL yapıyor?)
+#include "stack.h"
+#define N 100
+static int a[N];
+static int top = 0;
+
+void push(int x){ a[top++] = x; }
+int pop(void){ return a[--top]; }</code></pre>
+
+                <h3>2.10 Functional and logic languages — Fonksiyonel ve mantıksal diller</h3>
+                <p>İki büyük yaklaşım:</p>
+                <ul>
+                    <li><strong>Fonksiyonel:</strong> yan etkiler azaltılır, fonksiyonlar birinci sınıftır (map/filter).</li>
+                    <li><strong>Mantıksal (Prolog):</strong> “nasıl” yerine “ne”yi yazarsın; çıkarım yapar.</li>
+                </ul>
+
+                <h4>Prolog mini örnek</h4>
+                <pre><code class="language-prolog">% Fact
+insan(selim).
+
+% Rule
+olumlu(X) :- insan(X).
+
+% Query
+% ?- olumlu(selim).</code></pre>
+
+                <h3>2.11 Conclusions — Sonuç</h3>
+                <ul>
+                    <li>Yeni özellikler, genelde eski dillerin “eksiklerine” yanıt olarak gelir.</li>
+                    <li>Paradigma seçimi: problem tipine göre avantaj/dezavantaj taşır.</li>
+                </ul>
+
+                <h3>Mini test</h3>
+                <ol>
+                    <li>Fortran ile Algol’un hedeflediği problemler nasıl farklı?</li>
+                    <li>“Modül/ADT” neden ortaya çıktı? 2 madde yaz.</li>
+                    <li>Fonksiyonel dillerde “yan etki” neden azaltılır?</li>
+                </ol>
+
+
+                <footer>
+                    <div><strong>Made by <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank">Feyza</a></strong> <a href="https://www.linkedin.com/in/elif-feyza-g%C3%BCne%C5%9F-062086399/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+                    <div class="small"></div>
+                </footer>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/highlight.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
+
+

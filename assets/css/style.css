@@ -1,0 +1,516 @@
+:root {
+    --bg: #f6f5f3;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #7c3aed;
+    /* ikinci vurgu rengi: pembe yerine yumuşak teal (göz yormasın) */
+    --accent2: #14b8a6;
+    --codebg: #0b1220;
+    --codeink: #e5e7eb;
+    --shadow: 0 10px 30px rgba(17, 24, 39, .08);
+    --radius: 18px;
+    --maxw: 1100px;
+    --sidebar: 320px;
+    --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    overflow-x: hidden;
+    height: 100%
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: var(--font);
+    color: var(--ink);
+    background: radial-gradient(1200px 600px at 18% 0%, rgba(124, 58, 237, .10), transparent 55%), radial-gradient(900px 500px at 95% 15%, rgba(20, 184, 166, .08), transparent 55%), var(--bg);
+}
+
+a {
+    color: inherit
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 24px
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: var(--sidebar) 1fr;
+    gap: 18px;
+    align-items: start
+}
+
+.sidebar {
+    position: sticky;
+    top: 16px;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 10px 14px 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand h1 {
+    font-size: 18px;
+    margin: 0
+}
+
+.brand p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4
+}
+
+.search {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .8)
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: 14px;
+}
+
+.nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+    padding-right: 4px
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 12px;
+    color: #111827;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.nav a:hover {
+    background: rgba(124, 58, 237, .08)
+}
+
+.nav a.active {
+    background: rgba(124, 58, 237, .14);
+    color: #3b0764;
+    font-weight: 650
+}
+
+.nav .sep {
+    margin: 6px 0;
+    height: 1px;
+    background: var(--line)
+}
+
+.main {
+    background: rgba(255, 255, 255, .80);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px 22px 16px 22px;
+}
+
+.kicker {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border: 1px solid rgba(124, 58, 237, .22);
+    background: rgba(124, 58, 237, .08);
+    color: #3b0764;
+    border-radius: 999px;
+    font-weight: 650;
+}
+
+h2 {
+    margin: 14px 0 8px;
+    font-size: 24px
+}
+
+h3 {
+    margin: 18px 0 8px;
+    font-size: 18px
+}
+
+p {
+    margin: 8px 0;
+    color: #111827;
+    line-height: 1.65
+}
+
+ul {
+    margin: 8px 0 8px 18px;
+    line-height: 1.6
+}
+
+code.inline {
+    padding: 2px 6px;
+    border-radius: 8px;
+    background: rgba(17, 24, 39, .06);
+    border: 1px solid rgba(17, 24, 39, .08);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.92em;
+}
+
+pre {
+    background: var(--codebg);
+    color: var(--codeink);
+    padding: 14px 14px;
+    border-radius: 16px;
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+pre code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.callout {
+    border: 1px solid rgba(225, 29, 72, .18);
+    background: rgba(225, 29, 72, .06);
+    border-radius: 16px;
+    padding: 12px 12px;
+    margin: 12px 0;
+}
+
+.callout strong {
+    color: #9f1239
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px
+}
+
+.card {
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+footer {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 980px) {
+    .layout {
+        grid-template-columns: 1fr
+    }
+    .sidebar {
+        position: relative
+    }
+    .grid2 {
+        grid-template-columns: 1fr
+    }
+}
+
+
+/* =========================
+   Flashcards — Hızlı Sözlük
+   ========================= */
+
+.flash-toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 14px 0 10px;
+}
+
+.flash-toolbar .hint {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.flash-toolbar input {
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .85);
+    border-radius: 12px;
+    padding: 10px 12px;
+    min-width: 260px;
+    outline: none;
+}
+
+.flash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+    .flash-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+    }
+}
+
+@media (max-width: 620px) {
+    .flash-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+    }
+    .flash-toolbar input {
+        min-width: 100%;
+    }
+}
+
+.flashcard {
+    perspective: 900px;
+    -webkit-perspective: 900px;
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.flash-inner {
+    position: relative;
+    width: 100%;
+    /* Kartlar uzun tanımlarda taşmasın diye biraz daha yüksek */
+    min-height: 250px;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, .07);
+    /* 3D flip bazı tarayıcılarda (özellikle mobile) ters/ayna yazı üretebiliyor.
+     Bu yüzden "güvenli" flip: ön yüzü gizle, arka yüzü göster yaklaşımını kullanıyoruz. */
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .86);
+    overflow: hidden;
+}
+
+.flashcard.flipped .flash-inner {
+    transform: none;
+}
+
+.flash-face {
+    position: absolute;
+    inset: 0;
+    padding: 14px 14px 12px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-break: break-word;
+}
+
+
+/* Safari/Chromium bazı durumlarda çocuklarda ayna yazı gösterebiliyor */
+
+.flash-face * {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flash-front {
+    opacity: 1;
+}
+
+.flash-back {
+    opacity: 0;
+}
+
+.flashcard.flipped .flash-front {
+    opacity: 0;
+}
+
+.flashcard.flipped .flash-back {
+    opacity: 1;
+}
+
+.flash-front h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.flash-front .meta {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.flash-back {
+    /* Başlık üstte sabit, tanım aşağıda kaydırılabilir */
+}
+
+.flash-back h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.flash-def {
+    /* Uzun tanımlar taşmasın: kart içinde kaydırılabilsin */
+    overflow: auto;
+    flex: 1;
+}
+
+.flash-back .flash-def {
+    margin: 0;
+    color: #0f172a;
+    font-size: 13px;
+    line-height: 1.55
+}
+
+.flash-back .flash-def p {
+    margin: 0 0 8px 0
+}
+
+.flash-back .flash-def ul {
+    margin: 6px 0 0 18px
+}
+
+.flash-tag {
+    display: inline-flex;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--muted);
+    width: fit-content;
+    background: rgba(124, 58, 237, .06);
+}
+
+
+/* Flashcards: code wrapping */
+
+.flash-back pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+/* Code blocks */
+
+pre {
+    background: rgba(15, 23, 42, .04);
+    border: 1px solid var(--line);
+    padding: 12px;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    color: #0f172a;
+}
+
+
+/* Basit sözdizimi renklendirme (Prism benzeri) */
+
+code .token.comment {
+    color: #64748b
+}
+
+code .token.string {
+    color: #b45309
+}
+
+code .token.keyword {
+    color: #7c3aed;
+    font-weight: 600
+}
+
+code .token.type {
+    color: #0ea5e9;
+    font-weight: 600
+}
+
+code .token.number {
+    color: #16a34a
+}
+
+code .token.function {
+    color: #0f766e;
+    font-weight: 600
+}
+
+
+/* Prevent horizontal stretching on wide code grids */
+
+.main {
+    min-width: 0;
+}
+
+.content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.card-grid {
+    min-width: 0;
+}
+
+pre {
+    max-width: 100%;
+    overflow: auto;
+}
